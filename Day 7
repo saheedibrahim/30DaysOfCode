@@ -1,0 +1,9 @@
+let array1 = [2, 6, 9, 4]
+let array2 = [1, 2, 4, 8]
+let productToSum = 0;
+for(let i=0,j=0; i<array1.length,j<array2.length; i++,j++){
+    let arr1TimesArr2 = array1[i] * array2[j];
+    productToSum += arr1TimesArr2;
+    console.log(arr1TimesArr2);
+}
+console.log("Psum([2, 6, 9, 4], [1, 2, 4, 8]) === ", productToSum);
