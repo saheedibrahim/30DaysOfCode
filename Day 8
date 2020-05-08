@@ -1,0 +1,16 @@
+function bitCounting(val){
+    var bitCount = [];
+    var counts = 0;
+    while(val != 0){
+        if(val % 2 == 0){
+            val = val/2;
+            bitCount.push(0);
+        }else
+        {
+            val = Math.floor(val/2);
+                bitCount.push(1);
+                counts++;
+            }
+        }
+        console.log(counts);
+    }
