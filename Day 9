@@ -8,6 +8,7 @@ function currentDate(){
     var yeared = new Date();
     var monthed = new Date();
     var dated = new Date();
-    console.log("v1: ", dated.getDate(), "/" , monthed.getMonth() + 1, "/", yeared.getFullYear())
-    console.log("v2: ", monthed.getMonth() + 1, "/", dated.getDate(),"/" ,  yeared.getFullYear())
+    console.log("v1: ", dated.getDate(), "/" , monthed.getMonth() + 1, "/", yeared.getFullYear());
+    console.log("v2: ", monthed.getMonth() + 1, "/", dated.getDate(),"/" ,  yeared.getFullYear());
 }
+currentDate();
