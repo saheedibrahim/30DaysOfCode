@@ -1,0 +1,38 @@
+
+function arrayCollected(valOne, valTwo){ //declaring a function collect 2 integers and find the HCF
+    var firstValue = function(valOne){      //declaring a function to return the multiples of the first number
+        let firstArray = [];                //array to collect the multiples of the first number
+        for(var i=2; i<=valOne; i++){
+            while(valOne % i == 0){         //confirm that a number is exactly divisible
+                valOne = valOne/i;
+                firstArray.push(i);
+            }
+        }
+        return firstArray;
+    }
+    
+    var secondValue = function(valTwo){      //declaring a function to return the multiples of the second number
+        let secondArray = [];                  //array to collect the multiples of the second number
+        for(var i=2; i<=valTwo; i++){
+            while(valTwo % i == 0){             //confirm that a number is exactly divisible
+                valTwo = valTwo/i;
+                secondArray.push(i);
+            }
+        }
+        return secondArray;
+    }
+    
+    var collectFirstArray = firstValue(valOne);     //equate the multiples collected from the first array to collectFirstArray
+    var collectSecondArray = secondValue(valTwo);   //equate the multiples collected from the first array to collectFirstArray
+     console.log(collectFirstArray, collectSecondArray);
+     let result = 1;                                //initialize the result to 1
+    let arrayToCollect =[];                         //collect the common factor
+    for(var i=0,j=0; i<collectFirstArray.length,j<collectSecondArray.length; i++,j++){
+        if(collectFirstArray[i]==collectSecondArray[j]){        //confirm that the numbers are equal
+            arrayToCollect.push(collectFirstArray[i]);
+            result = Number(result) * Number(arrayToCollect[i]) ;   //multiply the multiples
+        }
+    }
+    console.log(arrayToCollect, result);
+}
+arrayCollected(44, 204);
