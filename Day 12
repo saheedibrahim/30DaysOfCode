@@ -1,0 +1,12 @@
+ /*function that solve a quadratic equation, it collect the values of a, b, and c then gives the roots of the equation*/
+ function quadraticEquation(a, b, c){
+     if(b*b < 4*a*c){ // confirm that it does not have a negative square root 
+         return null
+     }else{
+         let D = Math.sqrt(b*b - 4*a*c);
+         let X1 = (-b + D)/(2 * a);
+         let X2 = (-b - D)/(2 * a);
+         console.log("The roots of the equations are: ", X1, " and ", X2);
+     }
+ }
+ quadraticEquation(3, 6, 2)
