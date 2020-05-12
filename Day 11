@@ -30,7 +30,7 @@ function arrayCollected(valOne, valTwo){ //declaring a function collect 2 intege
     for(var i=0,j=0; i<collectFirstArray.length,j<collectSecondArray.length; i++,j++){
         if(collectFirstArray[i]==collectSecondArray[j]){        //confirm that the numbers are equal
             arrayToCollect.push(collectFirstArray[i]);
-            result = Number(result) * Number(arrayToCollect[i]) ;   //multiply the multiples
+            result = result * arrayToCollect[i];   //multiply the multiples
         }
     }
     console.log(arrayToCollect, result);
