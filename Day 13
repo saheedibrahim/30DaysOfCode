@@ -1,4 +1,5 @@
 function oddishOrEvenish(val){
+ val = val.toString();
  let summ = 0;
   for(const value of val){
     
@@ -10,4 +11,4 @@ function oddishOrEvenish(val){
     console.log("oddish")
   }
 }
-oddishOrEvenish("2341")
+oddishOrEvenish(2341)
