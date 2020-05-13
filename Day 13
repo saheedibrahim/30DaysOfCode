@@ -1,0 +1,13 @@
+function oddishOrEvenish(val){
+ let summ = 0;
+  for(const value of val){
+    
+    summ += Number(value);
+  }
+  if(summ % 2 == 0){
+    console.log("evenish")
+  }else{
+    console.log("oddish")
+  }
+}
+oddishOrEvenish("2341")
