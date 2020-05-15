@@ -1,26 +1,25 @@
 
+
 function uncensor(censor, missing){
   let reverse = missing.length - 1;
-  var reverseMissing = ""
+  var reverseMissing = "";
   while (reverse >= 0){
     reverseMissing += missing[reverse]
     reverse--
   }
   let collectWords = "";
- let i = reverseMissing.length - 1
+ let i = reverseMissing.length - 1;
   while (i >= 0){
-  for(let j=0; j<censor.length; j++){
-    if( censor[j]== "*"){
-      collectWords += reverseMissing[i]
+  for(const letter of censor){
+    if(letter == "*"){
+      collectWords += reverseMissing[i];
       i--;
     }else{
-      collectWords += censor[j]
+      collectWords += letter;
     }
   }
-  console.log(censor, missing)
-  console.log(collectWords);
 }
+console.log(collectWords);
 }
-
 
 uncensor("*lw*ys w*tch th* c*s*s","Aaaeae")
