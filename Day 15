@@ -10,13 +10,14 @@ Input : 10  Output : 55
 
 function value(val){
     let numberCollected = [];
-    let fastSum = 1;
+    let fastSum = 0;
     for(let i=1; i<=val; i++){
-        numberCollected.push(i);
+        numberCollected.push(i)
     }
     for(const coll of numberCollected){
-        fastSum *= coll;
+        fastSum += Number(coll);
     }
     console.log(fastSum);
 }
 value(3)
+value(10)
