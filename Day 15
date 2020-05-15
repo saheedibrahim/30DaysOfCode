@@ -1,4 +1,5 @@
-/*
+
+ /*
 backend | Beginner | 15
 Create a function named fastSum that takes a parameter, n and returns the sum of the first n numbers. You’re to use the best method 
 as time complexity will be graded. The code must be very fast for all constraints.
@@ -9,15 +10,8 @@ Input : 10  Output : 55
 */
 
 function value(val){
-    let numberCollected = [];
-    let fastSum = 0;
-    for(let i=1; i<=val; i++){
-        numberCollected.push(i)
-    }
-    for(const coll of numberCollected){
-        fastSum += Number(coll);
-    }
-    console.log(fastSum);
+    let fastSum = (val * (val + 1))/2
+    console.log(fastSum)
 }
 value(3)
 value(10)
