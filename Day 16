@@ -1,3 +1,11 @@
+/*DAY 16: LETS GO UP
+
+Deploy a script to any hosting service of your choice. When the API endpoint link is terminated with "/primes" and accessed, a string response with the first 20 prime numbers is sent back with appropriate response header.
+
+Apply best practices for your backend architecture(file structure) as a mentor might want to evaluate this.
+
+NB: Heroku might be a good place to deploy your script*/
+
 
 
 var firstTwentyPrimeNumbers = function(){
