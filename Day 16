@@ -8,13 +8,24 @@ NB: Heroku might be a good place to deploy your script*/
 
 
 
-var firstTwentyPrimeNumbers = function(){
+var http = require('http');
+var server = http.createServer(function (req, res) {
+ 
+  if (req.url == '/prime') {
+    res.writeHead(200, { 'content-Type': 'application/json'  });
+    res.write(JSON.stringify({ message: firstTwentyPrimeNumbers()}));
+    res.end();
+  }
+});
+server.listen(5000); 
+
+function firstTwentyPrimeNumbers() {
   let val = [2, 3, 5, 7]
-    for(var i=2; i<72; i++){
-      if(i%2!=0 && i%3!=0 && i%5!=0 && i%7!=0){
-        val.push(i)
-      }
+  for (var i = 2; i < 72; i++) {
+    if (i % 2 != 0 && i % 3 != 0 && i % 5 != 0 && i % 7 != 0) {
+      val.push(i)
     }
-  console.log(val)
+  }
+  return val;
 }
-firstTwentyPrimeNumbers()
+
